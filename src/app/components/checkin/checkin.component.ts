@@ -20,14 +20,10 @@ export class CheckinComponent implements OnInit {
 
   public checkIn() {
     let request = {
-      "id": 5,
+      "id": this.data.id,
       "checkedIn": true,
-      "numberOfBags": 11
+      "numberOfBags": this.noOfBags
     }
-
-    console.log(this.data.id);
-    console.log(this.noOfBags);
-    console.log(request);
 
     this.service.checkIn(request).subscribe(res=>{
       this.router.navigate(['confirm']);

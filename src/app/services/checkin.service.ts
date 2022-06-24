@@ -17,7 +17,7 @@ export class CheckinService {
 
   public checkIn(checkInRequest):any{
     // return this._httpClient.put(this.reservationUrl, checkInRequest);
-    return this._httpClient.put("http://localhost:8080/flightreservation/reservations", checkInRequest);
+    return this._httpClient.post("http://localhost:8080/flightreservation/reservations/", checkInRequest);
   }
 
 }
